@@ -3,7 +3,6 @@ select * from data_revenue dr
 where  dr.text_field ~ '\d{4}[-_./]\d{2}[-_./]\d{2}';  -- "~" regex (regular expression) match-> 4 digit year then separator [-_./]
 
 
-
 -- DDL = Data Definition Language --> add column by alter table, use only once 
 alter table data_revenue 
 add  column date_from_text text;
@@ -13,7 +12,6 @@ update data_revenue
 set date_from_text = 
         substring(text_field from '\d{4}[-_./]\d{2}[-_./]\d{2}') --substring(<szöveg> from <minta>)
 where text_field ~ '\d{4}[-_./]\d{2}[-_./]\d{2}'; 
-
 
 
 
@@ -29,7 +27,6 @@ where text_field ~ 'P\d{3}';
 
 
 
-
 --DDL add costumer_ID_from_text
 alter table data_revenue 
 add column costumer_ID_from_text text;
@@ -39,8 +36,6 @@ update data_revenue dr
 set costumer_ID_from_text=
 	substring(text_field from 'C\d{4}')
 where text_field ~ 'C\d{4}';
-
-
 
 
 
