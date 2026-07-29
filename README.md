@@ -19,25 +19,14 @@ SQL ETL pipeline in PostgreSQL: regex-based extraction of dates and IDs from mes
 
 <img width="575" height="416" alt="image" src="https://github.com/user-attachments/assets/dc498846-1de9-4ccf-97f3-08baa1ff6c6c" />
 
+## Overview
+(rövid összefoglaló, mit old meg a projekt)
 
+## Problem
+(a nyers, strukturálatlan text_field bemutatása + screenshot)
 
-scfaydfv
-scfaydfv
-scfaydfv
-scfaydfv
-scfaydfv
-scfaydfv
-scfaydfv
+## Pipeline Steps
+(a lépések: regex extrakció, coalesce, típuskonverzió — kód snippetek + screenshotok)
 
-scfaydfv
-scfaydfv
-scfaydfv
-scfaydfv
-scfaydfv
-scfaydfv
-scfaydfv
-
-
-
-#final-result
-tezst
+## Final Result
+(a master_sales view bemutatása + screenshot)
