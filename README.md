@@ -29,12 +29,12 @@ SQL · PostgreSQL · DBeaver
 (a nyers, strukturálatlan text_field bemutatása + screenshot)
 
 ## Pipeline Steps
-### 1. Detecting and extracting dates from unstructured text
+### 1. Detect and extract dates from unstructured text
 
-Some records had no value in the structured `date` column, but the date 
-existed inside a free-text field in an inconsistent format (`-`, `_`, `.`, 
+Some records have no value in the structured `date` column, but the date 
+exists inside the text field in an inconsistent format (`-`, `_`, `.`, 
 or `/` as separators). Using regex matching (`~`) and `substring()`, I 
-identified these rows and extracted the date pattern into a new column.
+identify these rows and extract the date pattern into a new column.
 
 ```sql
 select * from data_revenue dr
