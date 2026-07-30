@@ -161,6 +161,28 @@ select * from data_revenue dr ;
 
 
 
+
+## Final Result
+### 5. Modeling the master_sales view
+
+I model a `master_sales` view that combines revenue, product, and customer 
+data into a single, analysis-ready dataset. I use `LEFT JOIN` to bring in 
+product and customer details, ensuring that revenue records are preserved 
+even if a matching product or customer is missing.
+
+I calculate `revenue_huf` (quantity × price) at the row level, and add a 
+window function to calculate the total revenue per product 
+(`product_total_revenue`) — without collapsing the row-level detail, so 
+so I can see both the individual rows and the product level totals in 
+the same view.
+
+This view is the final result of the pipeline — the messy text data is 
+extracted and cleaned, the columns have the correct types, revenue is 
+calculated, and customer and product data are joined in. It's ready to 
+be used for reporting or further analysis.
+
+
+
 ```sql
 --Drop MASTER SALES if we have
 drop view if exists master_sales;
@@ -187,5 +209,3 @@ left join data_costumer dc
 ```
 
 
-## Final Result
-(a master_sales view bemutatása + screenshot)
