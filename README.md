@@ -207,5 +207,5 @@ left join data_costumer dc
     on dr.final_customer_id = dc."customer_ID";
 ```
 <img width="1296" height="903" alt="image" src="https://github.com/user-attachments/assets/96d807db-36a1-4ec9-b7dd-5457a42e3a74" />
-
-
+```sql
+```
