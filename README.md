@@ -47,8 +47,12 @@ set date_from_text =
 where text_field ~ '\d{4}[-_./]\d{2}[-_./]\d{2}'; 
 
 
+```
+
+teszt
 
 
+```sql
 --DDL add product_ID_from_text
 alter table data_revenue 
 add column product_ID_from_text text;
