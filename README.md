@@ -175,7 +175,7 @@ select * from data_revenue dr ;
 
 
 ## Final Result
-### 5. Modeling the master_sales view
+### Modeling the master_sales view
 
 I model a `master_sales` view that combines revenue, product, and customer 
 data into a single, analysis-ready dataset. I use `LEFT JOIN` to bring in 
