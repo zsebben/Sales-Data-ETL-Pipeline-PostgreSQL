@@ -122,7 +122,7 @@ update data_revenue dr
 set final_customer_id =
 	coalesce(dr."customer_ID" ,dr.costumer_id_from_text );
 
-select date,dr.date_from_text,dr.final_date,dr."product_ID",dr.product_id_from_text,dr.final_product_id,dr."customer_ID" ,dr.costumer_id_from_text,dr.final_customer_id from data_revenue dr;
+select dr.date,dr.date_from_text,dr.final_date,dr."product_ID",dr.product_id_from_text,dr.final_product_id,dr."customer_ID" ,dr.costumer_id_from_text,dr.final_customer_id from data_revenue dr;
 ```
 <img width="1367" height="447" alt="image" src="https://github.com/user-attachments/assets/4469fcd4-01cc-416e-a559-a6a9de8f65d5" />
 
