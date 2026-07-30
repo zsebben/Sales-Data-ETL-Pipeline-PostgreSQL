@@ -157,6 +157,7 @@ where table_name = 'data_revenue';
 
 select * from data_revenue dr ;
 ```
+<img width="597" height="451" alt="image" src="https://github.com/user-attachments/assets/fff7edd9-f0bd-4483-917c-39d8a66386b7" />
 
 
 
