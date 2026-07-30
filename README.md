@@ -29,7 +29,7 @@ SQL · PostgreSQL · DBeaver
 (a nyers, strukturálatlan text_field bemutatása + screenshot)
 
 ## Pipeline Steps
-'''
+'''sql
 select * from data_revenue dr
 where  dr.text_field ~ '\d{4}[-_./]\d{2}[-_./]\d{2}';  -- "~" regex (regular expression) match-> 4 digit year then separator [-_./]
 
