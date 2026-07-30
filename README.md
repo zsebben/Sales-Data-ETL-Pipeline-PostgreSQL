@@ -126,6 +126,14 @@ select dr.date,dr.date_from_text,dr.final_date,dr."product_ID",dr.product_id_fro
 ```
 <img width="1367" height="447" alt="image" src="https://github.com/user-attachments/assets/4469fcd4-01cc-416e-a559-a6a9de8f65d5" />
 
+
+### Transform: standardizing formats and converting data types
+I standardize the inconsistent date separators
+then convert `final_date` from text to date, and `quantity` from 
+text to integer — preparing both columns for accurate calculations 
+and joins in the final view.
+
+
 ```sql
 --final_date--
 update data_revenue dr 
@@ -147,9 +155,12 @@ select column_name, data_type
 from information_schema.columns
 where table_name = 'data_revenue';
 
-
 select * from data_revenue dr ;
+```
 
+
+
+```sql
 --Drop MASTER SALES if we have
 drop view if exists master_sales;
 
