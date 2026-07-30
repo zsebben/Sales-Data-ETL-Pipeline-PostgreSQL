@@ -29,7 +29,7 @@ SQL · PostgreSQL · DBeaver
 (a nyers, strukturálatlan text_field bemutatása + screenshot)
 
 ## Pipeline Steps
-### 1. Detect and extract dates from unstructured text
+### Detect and extract dates from unstructured text
 
 Some records have no value in the `date` column, but the date 
 exists inside the text field in an inconsistent format (`-`, `_`, `.`, 
@@ -55,12 +55,15 @@ where text_field ~ '\d{4}[-_./]\d{2}[-_./]\d{2}';
 <img width="769" height="452" alt="image" src="https://github.com/user-attachments/assets/395c874e-5432-437d-8dd7-ea75bdc066ca" />
 
 
-
+### Extract product and customer IDs
+Using the same regex approach as with the date, I extract the product 
+ID and customer ID from the text field, then prepare three new columns to hold the final, merged values.
 
 ```sql
 --DDL add product_ID_from_text
 alter table data_revenue 
 add column product_ID_from_text text;
+
 
 --extract product_ID
 update data_revenue dr 
@@ -69,11 +72,10 @@ set product_id_from_text=
 where text_field ~ 'P\d{3}';
 
 
-
-
 --DDL add costumer_ID_from_text
 alter table data_revenue 
 add column costumer_ID_from_text text;
+
 
 --extract costumer_ID
 update data_revenue dr 
@@ -82,16 +84,19 @@ set costumer_ID_from_text=
 where text_field ~ 'C\d{4}';
 
 
-
-
-
-
 --DDL finalize extracted data, IDs and date
 alter table data_revenue 
 add column final_date text,
 add column final_customer_ID text,
 add column final_product_ID text;
+```
+<img width="1208" height="449" alt="image" src="https://github.com/user-attachments/assets/dcfbdc14-12bf-45fb-85c0-85ee64cb4b1c" />
 
+
+
+
+
+```sql
 --DML final date --> Data Manipulation Language 
 update data_revenue
 set final_date =
