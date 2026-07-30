@@ -31,9 +31,9 @@ SQL · PostgreSQL · DBeaver
 ## Pipeline Steps
 ### 1. Detect and extract dates from unstructured text
 
-Some records have no value in the structured `date` column, but the date 
+Some records have no value in the `date` column, but the date 
 exists inside the text field in an inconsistent format (`-`, `_`, `.`, 
-or `/` as separators). Using regex matching (`~`) and `substring()`, I 
+or `/` as separators). Using regex matching and `substring()`, I 
 identify these rows and extract the date pattern into a new column.
 
 ```sql
@@ -52,8 +52,9 @@ set date_from_text =
         substring(text_field from '\d{4}[-_./]\d{2}[-_./]\d{2}') --substring(<szöveg> from <minta>)
 where text_field ~ '\d{4}[-_./]\d{2}[-_./]\d{2}'; 
 ```
+<img width="769" height="452" alt="image" src="https://github.com/user-attachments/assets/395c874e-5432-437d-8dd7-ea75bdc066ca" />
 
-teszt
+
 
 
 ```sql
