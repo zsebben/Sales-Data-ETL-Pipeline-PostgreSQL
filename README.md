@@ -24,13 +24,10 @@ SQL · PostgreSQL · DBeaver
 
 
 ## Key techniques
-- **Data cleaning:** regex pattern matching, string manipulation, COALESCE
-- **Schema management:** ALTER TABLE, column type conversion (DDL)
-- **Data transformation:** UPDATE/DML operations, CASE WHEN logic
-- **Data modeling:** views, JOINs across multiple tables
+- **Extract:** regex pattern matching, string manipulation (extracting values from unstructured text)
+- **Transform:** COALESCE, CASE WHEN, ALTER TABLE, column type conversion (DDL)
+- **Load / Model:** views, JOINs across multiple tables
 - **Analytics:** window functions (SUM OVER PARTITION BY)
-
-
 
 
 ## Pipeline Steps
