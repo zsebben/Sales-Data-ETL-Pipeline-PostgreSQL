@@ -64,7 +64,17 @@ update data_revenue dr
 set final_customer_id =
 	coalesce(dr."customer_ID" ,dr.costumer_id_from_text );
 
-select dr.date,dr.date_from_text,dr.final_date,dr."product_ID",dr.product_id_from_text,dr.final_product_id,dr."customer_ID" ,dr.costumer_id_from_text,dr.final_customer_id from data_revenue dr;
+select 
+dr.date,
+dr.date_from_text,
+dr.final_date,
+dr."product_ID",
+dr.product_id_from_text,
+dr.final_product_id,
+dr."customer_ID" ,
+dr.costumer_id_from_text,
+dr.final_customer_id 
+from data_revenue dr;
 
 --final_date--
 update data_revenue dr 
