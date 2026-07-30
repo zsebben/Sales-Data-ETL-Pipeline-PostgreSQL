@@ -29,6 +29,12 @@ SQL · PostgreSQL · DBeaver
 (a nyers, strukturálatlan text_field bemutatása + screenshot)
 
 ## Pipeline Steps
+### 1. Detecting and extracting dates from unstructured text
+
+Some records had no value in the structured `date` column, but the date 
+existed inside a free-text field in an inconsistent format (`-`, `_`, `.`, 
+or `/` as separators). Using regex matching (`~`) and `substring()`, I 
+identified these rows and extracted the date pattern into a new column.
 
 ```sql
 select * from data_revenue dr
@@ -45,8 +51,6 @@ update data_revenue
 set date_from_text = 
         substring(text_field from '\d{4}[-_./]\d{2}[-_./]\d{2}') --substring(<szöveg> from <minta>)
 where text_field ~ '\d{4}[-_./]\d{2}[-_./]\d{2}'; 
-
-
 ```
 
 teszt
