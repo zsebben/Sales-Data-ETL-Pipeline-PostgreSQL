@@ -5,17 +5,22 @@
 - [Overview](#overview)
 - [Tech stack](#tech-stack)
 - [Key techniques](#key-techniques) 
-- [Problem](#problem)
 - [Pipeline Steps](#pipeline-steps)
 - [Final Result](#final-result)
+
+
 
 
 ## Overview
 SQL ETL pipeline in PostgreSQL: regex-based extraction of dates and IDs from messy text data, type conversion, and a production-ready master_sales view joining revenue, product, and customer tables with window function-based revenue aggregation.
 
 
+
+
 ## Tech stack
 SQL · PostgreSQL · DBeaver
+
+
 
 
 ## Key techniques
@@ -25,8 +30,8 @@ SQL · PostgreSQL · DBeaver
 - **Data modeling:** views, JOINs across multiple tables
 - **Analytics:** window functions (SUM OVER PARTITION BY)
 
-## Problem
-(a nyers, strukturálatlan text_field bemutatása + screenshot)
+
+
 
 ## Pipeline Steps
 ### Detect and extract dates from unstructured text
