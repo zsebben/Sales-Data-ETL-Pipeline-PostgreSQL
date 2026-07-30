@@ -172,8 +172,7 @@ even if a matching product or customer is missing.
 
 I calculate `revenue_huf` (quantity × price) at the row level, and add a 
 window function to calculate the total revenue per product 
-(`product_total_revenue`) — without collapsing the row-level detail, so 
-so I can see both the individual rows and the product level totals in 
+(`product_total_revenue`) — without collapsing the row-level detail, so I can see both the individual rows and the product level totals in 
 the same view.
 
 This view is the final result of the pipeline — the messy text data is 
@@ -207,5 +206,6 @@ left join data_product dp
 left join data_costumer dc
     on dr.final_customer_id = dc."customer_ID";
 ```
+<img width="1296" height="903" alt="image" src="https://github.com/user-attachments/assets/96d807db-36a1-4ec9-b7dd-5457a42e3a74" />
 
 
